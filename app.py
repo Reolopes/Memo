@@ -17,7 +17,7 @@ janela.title('Jogo da memória')
 janela.geometry('580x620+800+200')
 janela.resizable(False, False)
 janela.iconbitmap('ico/memo.ico')
-janela.configure(bg='green')
+janela.configure(bg='gray')
 
 
 imagens_cartao = ['images/image1.ppm', 'images/image2.ppm', 'images/image3.ppm', 'images/image4.ppm', 'images/image5.ppm', 'images/image6.ppm',
@@ -132,8 +132,7 @@ def cartao_selecionado(linha, coluna):
                 win.play()
                 label_tentativas.config(text='Parabéns! Jogo concluído com {} tentativas.'.format(numero_de_tentativas))
                 inicia_jogo = False
-                janela.destroy()
-
+                
 for linha in range(linhas):
     cartao_format = []
     for coluna in range(colunas):
